@@ -17,6 +17,7 @@ class HomeController extends AbstractController
         // Recuperation de données
 
         $properties = $repository->findLatest();
+        dump($properties);
 
         return $this->render('pages/home.html.twig', [
             'properties' => $properties
